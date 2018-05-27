@@ -5,12 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Psychic Juego</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 </head>
 <body>
     <h1>Ms. Cleo's Guessing Game</h1>
     <h2>Guess what letter Ms. Cleo is thinking of.</h2>
+
+    <div id="game">
+        <p>Press any key to start predicting the future!</p>
+    </div>
+
+    <script type= "text/javascript">
+        //Variables for gues are listed, first Cleo, then computer//
+        let cleoChoices = ['abcdefghijklmnopqrstuvwxyz'];
+
+        //Variables for counting and setting wins and losses//
+        let wins = 0;
+        let losses = 0;
+
+    document.onkeyup = function(event) {
+
+        let userGuess = event.key;
+
+        let cleoGuess = cleoChoices[Math.floor(Math.random()* cleoChoices.length)];
+
+        if (userGuess === cleoGuess) {
+            wins++;
+        } else if (losses++)
+
+        var html = 
+        "<p>you chose: " + userGuess + "</p>" +
+        "<p> Ms. Cleo chose: " + cleoGuess + "</p>" +
+        "<p> wins: " + wins + "</p>" +
+        "<p> losses: " + losses + "</p>";
+    }
     
+
+    
+    </script>
+
 </body>
 </html>
