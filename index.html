@@ -16,7 +16,7 @@
 
     <script type= "text/javascript">
         //Variables for gues are listed, first Cleo, then computer//
-        let cleoChoices = ['abcdefghijklmnopqrstuvwxyz'];
+        let cleoChoices = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
         //Variables for counting and setting wins and losses//
         let wins = 0;
@@ -37,6 +37,9 @@
         "<p> Ms. Cleo chose: " + cleoGuess + "</p>" +
         "<p> wins: " + wins + "</p>" +
         "<p> losses: " + losses + "</p>";
+
+        document.querySelector("#game").innerHTML = html;
+        
     }
     
 
