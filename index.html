@@ -30,7 +30,7 @@
 
         if (userGuess === cleoGuess) {
             wins++;
-        } else if (losses++)
+        } else (losses++)
 
         var html = 
         "<p>you chose: " + userGuess + "</p>" +
@@ -38,12 +38,11 @@
         "<p> wins: " + wins + "</p>" +
         "<p> losses: " + losses + "</p>";
 
-        console.log(html);
-
         if (losses >= 10) {
-            alert('YOU LOSE, DARLIN. PAY 5.95 FOR EVERY MINUTE PLAYED AND RELOAD THE PAGE FOR ANOTHA 5.95.');
+            alert('YOU LOSE, DARLIN. PAY 5.95 FOR EVERY MINUTE PLAYED AND PLAY AGAIN BY PRESSING ANY KEY!.. FOR 5.95... DARLIN.')
+            onclick(losses = 0, wins=0);
         } else if (wins >= 5){
-            alert('YOU WIN, DARLIN. PAY 5.95 FOR EVERY MINUTE PLAYED AND RELOAD PAGE FOR ANOTHA 5.95');
+            alert('YOU WIN, DARLIN.');
         }
 
         document.querySelector("#game").innerHTML = html;
