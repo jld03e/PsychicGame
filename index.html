@@ -19,6 +19,7 @@
         let cleoChoices = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
         //Variables for counting and setting wins and losses//
+        let lifeLine = 10
         let wins = 0;
         let losses = 0;
 
@@ -30,17 +31,18 @@
 
         if (userGuess === cleoGuess) {
             wins++;
-        } else (losses++)
+        } else (lifeLine-- && losses++)
 
         var html = 
         "<p>you chose: " + userGuess + "</p>" +
         "<p> Ms. Cleo chose: " + cleoGuess + "</p>" +
+        "<p>Lifelines: " + lifeLine + "</p>" +
         "<p> wins: " + wins + "</p>" +
         "<p> losses: " + losses + "</p>";
 
-        if (losses >= 10) {
+        if (lifeLine <= 0) {
             alert('YOU LOSE, DARLIN. PAY 5.95 FOR EVERY MINUTE PLAYED AND PLAY AGAIN BY PRESSING ANY KEY!.. FOR 5.95... DARLIN.')
-            onclick(losses = 0, wins=0);
+            onclick(losses = 0, wins=0, lifeLine=10);
         } else if (wins >= 5){
             alert('YOU WIN, DARLIN.');
         }
